@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+  <div id="wrapCadastro">
+    <h1>Cadastro</h1>
+    <form id="formCadastro">
+      <input type="text" name="name" id="nicknameCadastro">
+      <input type="password" name="password" id="senhaCadastro">
+      <input type="submit" value="Teste" id="confirmaCadastro">
+    </form>
+  </div>
+
+  <div id="wrapLogin">
+    <h1>Login</h1>
+    <form action="http://localhost:3000/login" id="formLogin" method="post">
+      <input type="text" name="name" id="nicknameLogin">
+      <input type="password" name="password" id="nicknameSenha">
+      <input type="submit" value="Teste" id="confirmaLogin">
+    </form>
+  </div>
+
+  <script src="./login.js"></script>
+  <script src="./cadastro.js"></script>
+</body>
+</html>
