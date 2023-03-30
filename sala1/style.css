@@ -1,7 +1,12 @@
+html{
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding-bottom: 3rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  height: 100%
 }
 
 #form {
@@ -51,4 +56,12 @@ body {
 
 #messages>li:nth-child(odd) {
   background: #efefef;
+}
+
+#wrapFormNickname{
+  background-color: rgba(255, 0, 0, 0.349);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
 }
