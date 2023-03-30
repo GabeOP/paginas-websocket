@@ -26,7 +26,6 @@ function logarUsuario(e) {
   })
     .then((res) => {
       if (res.status === 200) {
-        alert("Login realizado com sucesso!");
         localStorage.setItem("nickname", nicknameLogin.value);
         window.location.replace("http://127.0.0.1:5500/sala1/sala1.html")
       } else if(res.status === 404){
