@@ -4,27 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Início</title>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="wrapCadastro">
-    <h1>Cadastro</h1>
-    <form id="formCadastro">
-      <input type="text" name="name" id="nicknameCadastro">
-      <input type="password" name="password" id="senhaCadastro">
-      <input type="submit" value="Teste" id="confirmaCadastro">
-    </form>
-  </div>
-
-  <div id="wrapLogin">
-    <h1>Login</h1>
-    <form action="http://localhost:3000/login" id="formLogin" method="post">
-      <input type="text" name="name" id="nicknameLogin">
-      <input type="password" name="password" id="nicknameSenha">
-      <input type="submit" value="Teste" id="confirmaLogin">
-    </form>
+  <div id="wrapGeral">
+    <div id="wrapCadastro">
+      <h1>Cadastro</h1>
+      <form id="formCadastro">
+        <div>
+          <label for="name">Digite o seu nome</label>
+          <input type="text" name="name" id="nicknameCadastro">
+        </div>
+        <div>  
+          <label for="password">Digite a sua senha</label>
+          <input type="password" name="password" id="senhaCadastro">
+        </div>
+        <input type="submit" value="Cadastrar" id="confirmaCadastro">
+      </form>
+    </div>
+  
+    <div id="wrapLogin">
+      <h1>Login</h1>
+      <form action="http://localhost:3000/login" id="formLogin" method="post">
+        <div>
+          <label for="name">Digite o seu nome</label>
+          <input type="text" name="name" id="nicknameLogin">
+        </div>
+        <div>
+          <label for="password">Digite a sua senha</label>
+          <input type="password" name="password" id="nicknameSenha">
+        </div>
+        <input type="submit" value="Logar" id="confirmaLogin">
+      </form>
+    </div>
   </div>
 
   <script src="./login.js"></script>
