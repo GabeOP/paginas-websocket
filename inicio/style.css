@@ -1,0 +1,75 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+body{
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#wrapGeral{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  width: 100%;
+  max-width: 750px;
+  padding: 20px;
+}
+
+#wrapLogin, #wrapCadastro{
+  background-color: #f6f6f6;
+  border: 2px solid #8fc1c9;
+  border-radius: 3px;
+  height: 250px;
+  color:#076a75;
+  padding: 20px;
+}
+
+input{
+  padding: 6px;
+  border: 2px solid #d8d8d8;
+  border-radius: 3px;
+}
+#formLogin div, #formCadastro div{
+  display: flex;
+  flex-direction: column;
+}
+
+#formLogin, #formCadastro{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#formCadastro{
+  display: flex;
+  flex-direction: column;
+}
+
+#confirmaCadastro, #confirmaLogin{
+  margin-top: 7px;
+  background-color: #3d9db3;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2px;
+}
+@media (min-width: 1000px){
+  #wrapGeral{
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 60%;
+  }
+  #wrapLogin, #wrapCadastro{
+    height: 350px;
+    width: 400px;
+  }
+  #wrapLogin h1, #wrapCadastro h1{
+    margin-bottom: 40px;
+  }
+}
