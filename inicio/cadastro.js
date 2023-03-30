@@ -27,8 +27,8 @@ function cadastrarUsuario(e){
     if(res.ok){
       alert("Usuário cadastrado com sucesso!")
       location.reload()
-    }else{
-      alert("Ocorreu um erro!")
+    }else if(res.status === 400){
+      alert("Usuário já cadastrado. Tente novamente.")
     }
   })
   .catch(err => console.log(err))
