@@ -16,7 +16,7 @@ function cadastrarUsuario(e){
     name: nicknameCadastro.value,
     password: senhaCadastro.value
   }
-  fetch("http://localhost:3000/cadastro", {
+  fetch("https://api-websocket.onrender.com/cadastro", {
     method: 'POST',
     headers: {
       "Content-Type": "application/json"

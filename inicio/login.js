@@ -17,7 +17,7 @@ function logarUsuario(e) {
     password: nicknameSenha.value,
   };
 
-  fetch("http://localhost:3000/login", {
+  fetch("https://api-websocket.onrender.com/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -27,7 +27,7 @@ function logarUsuario(e) {
     .then((res) => {
       if (res.status === 200) {
         localStorage.setItem("nickname", nicknameLogin.value);
-        window.location.replace("http://127.0.0.1:5500/sala1/sala1.html")
+        window.location.replace("../sala1/sala1.html")
       } else if(res.status === 404){
         alert("Usuário não encontrado!")
       }else if(res.status === 422){

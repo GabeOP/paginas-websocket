@@ -1,5 +1,5 @@
 // Conexão com o servidor Socket.io
-const socket = io("http://localhost:3000/sala1");
+const socket = io("https://api-websocket.onrender.com/sala1");
 
 //=========Parte que cuida das mensagens=========//
 const form = document.getElementById("form");
@@ -14,11 +14,24 @@ form.addEventListener("submit", (e) => {
   }
 });
 
+const btnSair = document.getElementById("btnSair")
+
+btnSair.addEventListener("click", ()=>{
+  const confirmar = confirm("Tem certeza que você quer sair?");
+
+  if(confirmar){
+    localStorage.removeItem("nickname")
+    window.location.replace("../inicio/inicio.html")
+  }else{
+    console.log("Negou")
+  }
+})
+
 socket.on("connect", () => {
   socket.on("chat message", (msg) => {
     const item = document.createElement("li");
     const teste = localStorage.getItem("nickname");
-    item.textContent = `${teste}: ${msg}`;
+    item.innerHTML = `${teste}: ${msg}`;
     mensagens.appendChild(item);
     window.scrollTo(0, document.body.scrollHeight);
   });
